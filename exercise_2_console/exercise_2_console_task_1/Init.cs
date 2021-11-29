@@ -56,15 +56,17 @@ namespace exercise_2_console_task_1
             {
                 return 1;
             }
-            else if (
-                checkingPoint.X < xSquareBorders.X || checkingPoint.X > xSquareBorders.Y &&
-                checkingPoint.Y < ySquareBorders.X || checkingPoint.Y > ySquareBorders.Y)
+            else if ((
+                (checkingPoint.X == xSquareBorders.X || checkingPoint.X == xSquareBorders.Y) &&
+                (checkingPoint.Y > ySquareBorders.X && checkingPoint.Y < ySquareBorders.Y)) ||
+                (checkingPoint.X > xSquareBorders.X && checkingPoint.X < xSquareBorders.Y) &&
+                (checkingPoint.Y == ySquareBorders.X || checkingPoint.Y == ySquareBorders.Y))
             {
-                return -1;
+                return 0;
             }
             else
             {
-                return 0;
+                return -1;
             }
 
         }
