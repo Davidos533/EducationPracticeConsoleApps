@@ -49,7 +49,7 @@ namespace exercise_2_console_task_2
                 else if (year % 4 == 0 && days >= Summ(monthsDays) + 1)
                 {
 
-                    days -= Summ(monthsDays) + 1;
+                    days -= (Summ(monthsDays) + 1);
                 }
                 else
                 {
